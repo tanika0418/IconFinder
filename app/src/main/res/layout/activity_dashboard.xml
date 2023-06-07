@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.Dashboard">
+
+    <RelativeLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:text="Latest Posted"
+            android:id="@+id/iconset_name_head"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="56dp"
+            android:textColor="@color/black"
+            android:textSize="24sp"/>
+
+        <ImageView
+            android:id="@+id/search_icon"
+            android:layout_marginRight="16dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/loupe"
+            android:layout_width="24dp"
+            android:layout_height="24dp"/>
+
+    </RelativeLayout>
+
+    <com.example.iconfinder.custom.BucketRecyclerView
+        android:id="@+id/rv_mainIcons"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/app_bar" />
+
+    <ProgressBar
+        android:indeterminateTintMode="src_atop"
+        android:indeterminateTint="@color/black"
+        android:id="@+id/progress_main"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <androidx.cardview.widget.CardView
+        android:visibility="gone"
+        android:layout_marginBottom="16dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/progress"
+        app:cardElevation="6dp"
+        app:cardCornerRadius="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ProgressBar
+            android:indeterminateTintMode="src_atop"
+            android:indeterminateTint="@color/black"
+            android:layout_margin="6dp"
+            android:layout_width="32dp"
+            android:layout_height="32dp"/>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
